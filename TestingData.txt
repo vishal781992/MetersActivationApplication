@@ -1,0 +1,258 @@
+﻿Dataset_MeterID.Add("10588693");
+Dataset_MeterID.Add("10554579");
+Dataset_MeterID.Add("10554580");
+
+Dataset_MeterID.Add("10554581");
+Dataset_MeterID.Add("10554582");
+Dataset_MeterID.Add("10554583");
+
+Dataset_MeterID.Add("10547793");
+Dataset_MeterID.Add("10554575");
+Dataset_MeterID.Add("10554574");
+
+Dataset_MeterID.Add("10554573");
+Dataset_MeterID.Add("10554572");
+Dataset_MeterID.Add("10554571");
+
+Dataset_MeterID.Add("10554570");
+Dataset_MeterID.Add("10554569");
+Dataset_MeterID.Add("10554568");
+
+Dataset_MeterID.Add("10554567");
+Dataset_MeterID.Add("10554566");
+
+
+//public void ExcelWriting(string InputFilename)
+//{
+//    _Excel1.Workbook wb1;
+//    _Excel1.Worksheet ws1;
+
+//    //wb = excel.Workbooks.Open(InputFilename);
+//    //ws = wb.Worksheets[1];//sheet
+
+//    object misValue = System.Reflection.Missing.Value;
+//    wb1 = excel2.Workbooks.Add(misValue);
+//    ws1 = (_Excel1.Worksheet)wb1.Worksheets.get_Item(1);
+//    string IsFileCreatedAlready = string.Empty;
+//    if (textBox_tab1_browse.Text.EndsWith(".xls"))
+//        IsFileCreatedAlready = textBox_tab1_browse.Text.Replace(".xls", "_ActReport.xlsx");
+//    else
+//        IsFileCreatedAlready = textBox_tab1_browse.Text.Replace(".xlsx", "_ActReport.xlsx");
+
+//    int sheetRow = 1;
+//    int counter = 0;
+//    ws1.Cells[sheetRow, 1].Value2 = "SimCardID";
+//    ws1.Cells[sheetRow, 2].Value2 = "IMEI";
+//    ws1.Cells[sheetRow, 3].Value2 = "Status/Time"; sheetRow++;
+//    foreach (string str in ResponseActivation)
+//    {
+//        try
+//        {
+//            ws1.Cells[sheetRow, 1].Value2 = "\'" + DatasetC1[counter];
+//            ws1.Cells[sheetRow, 2].Value2 = "\'" + DatasetC2[counter];
+//            ws1.Cells[sheetRow, 3].Value2 = ResponseActivation[counter] + ": " + DateTime.Now.ToString("MM/dd/yyyy.HH:mm");
+
+//            counter++;
+//            sheetRow++;
+//        }
+//        catch
+//        {
+//            sheetRow++; counter++;
+//        }
+//    }
+//    string tempAddress = string.Empty;
+//    if (textBox_tab1_browse.Text.EndsWith(".xls"))
+//        tempAddress = textBox_tab1_browse.Text.Replace(".xls", "_ActReport.xlsx");
+//    else
+//        tempAddress = textBox_tab1_browse.Text.Replace(".xlsx", "_ActReport.xlsx");
+//    try
+//    {
+//        wb1.SaveAs(tempAddress);
+//    }
+//    catch
+//    {
+//        DialogResult DR = MessageBox.Show("The File, application is trying to overwrite\r\nis already open in MS office.\r\nClose that File and hit OK.\r\nHit Cancel to create a new File.", "File already Open", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+
+//        if (DR == DialogResult.Cancel)
+//        {
+//            if (textBox_tab1_browse.Text.EndsWith(".xls"))
+//                tempAddress = textBox_tab1_browse.Text.Replace(".xls", "_ActReport001.xlsx");
+//            else
+//                tempAddress = textBox_tab1_browse.Text.Replace(".xlsx", "_ActReport001.xlsx");
+
+//            wb1.SaveAs(tempAddress);
+//        }
+//        else
+//        {
+//            try { wb1.SaveAs(tempAddress); }
+//            catch { MessageBox.Show("Wrong selection, the file is not created."); }
+//        }
+//    }
+//    wb1.Close(0);
+
+//    //while (Marshal.ReleaseComObject(wb1) > 0) { }
+//    //wb1 = null;
+//    //while (Marshal.ReleaseComObject(ws1) > 0) { }
+//    //ws1 = null;
+//    GC();
+//    excel2.Quit();
+//    //while (Marshal.ReleaseComObject(excel2) > 0) { }
+//    //excel2 = null;
+//    GC();
+//}
+
+
+
+
+#region TempCommentedCode
+//if (ProcessedResponse.Length > 10)
+//{
+//    ProcessedResponse = ProcessedResponse.Substring(ProcessedResponse.IndexOf("{") + 1);
+//    tempStringResponse2 = ProcessedResponse.Substring(ProcessedResponse.IndexOf("\"iccid\"") + 7);
+//    tempStringResponse2 = tempStringResponse2.Substring(tempStringResponse2.IndexOf("\"") + 1, 21);
+//    tempStringResponse2 = tempStringResponse2.TrimStart(trimmerArray);//'\"', ':' --- '\"', ','
+//    tempStringResponse2 = tempStringResponse2.TrimEnd(trimmerArray); richTextBox1.AppendText("SimID: " + tempStringResponse2);
+
+//    tempStringResponse2 = ProcessedResponse.Substring(ProcessedResponse.IndexOf("\"imei\"") + 6);
+//    tempStringResponse2 = tempStringResponse2.Substring(tempStringResponse2.IndexOf("\"") + 1, 16);
+//    tempStringResponse2 = tempStringResponse2.TrimStart(trimmerArray);
+//    tempStringResponse2 = tempStringResponse2.TrimEnd(trimmerArray); richTextBox1.AppendText(", IMEI: " + tempStringResponse2);
+
+//    tempStringResponse2 = ProcessedResponse.Substring(ProcessedResponse.IndexOf("\"request_type\"") + 14);
+//    tempStringResponse2 = tempStringResponse2.Substring(tempStringResponse2.IndexOf("\"") + 1);
+//    tempStringResponse2 = tempStringResponse2.Substring(0, tempStringResponse2.IndexOf("\""));
+//    tempStringResponse2 = tempStringResponse2.TrimStart(trimmerArray);
+//    tempStringResponse2 = tempStringResponse2.TrimEnd(trimmerArray); richTextBox1.AppendText(", Request Type: " + tempStringResponse2);
+//}
+//if (unProcessedResponse.Length > 10)
+//{
+//    tempStringResponse2 = unProcessedResponse.Substring(unProcessedResponse.IndexOf("\"error\":") + 8);
+//    tempStringResponse2 = tempStringResponse2.Substring(tempStringResponse2.IndexOf("\"") + 1);
+//    tempStringResponse2 = tempStringResponse2.Substring(0, tempStringResponse2.IndexOf("\","));
+//    tempStringResponse2 = tempStringResponse2.TrimStart(trimmerArray);
+//    tempStringResponse2 = tempStringResponse2.TrimEnd(trimmerArray);
+//    tempStringResponse2 = tempStringResponse2.Replace('\"', ' '); tempStringResponse2 = tempStringResponse2.Replace('\\', ' '); 
+//    tempStringResponse2 = tempStringResponse2.Replace(",", "\r\n");
+//    richTextBox1.AppendText("Error Message: " + tempStringResponse2);
+//}
+#endregion TempCommentedCode
+
+API class commented code
+/*using (var httpClient = new HttpClient())
+{
+using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://api.lattigo.com/v2/device_operations/activation_request"))
+{
+var base64authorization = Convert.ToBase64String(Encoding.ASCII.GetBytes("66f9f210a996a2ed1ceb18b2c81668f1:7198c2d547c123826c054a17a9bf12c05755d834608bd6986e1154fb43f02c1b"));
+request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}"); 
+
+request.Content = new StringContent("{ \"rate_plan_name\" : \"ACME Co 5mb Rate Plan\", \"activation_requests\": [ { \"imei\" : \"111111111111111\" , \"iccid\" : \"89222222222222222222\" }, { \"imei\" : \"333333333333333\" , \"iccid\" : \"89444444444444444444\", \"note\"  : \"Notes are stored with the device record and can be used for sorting, filtering, record keeping, etc.\" }, { \"imei\" : \"555555555555555\" , \"iccid\" : \"89666666666666666666\", \"note3\" : \"Note fields do not need to be filled in any particular order.\" } ] }");
+request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json"); 
+
+var response = await httpClient.SendAsync(request);
+}
+
+
+
+
+//, { \"imei\" : \"333333333333333\" , \"iccid\" : \"89444444444444444444\", \"note\"  : \"Notes are stored with the device record and can be used for sorting, filtering, record keeping, etc.\" }, { \"imei\" : \"555555555555555\" , \"iccid\" : \"89666666666666666666\", \"note3\" : \"Note fields do not need to be filled in any particular order.\" }
+
+//public async Task<dynamic> ChirPostLogin_Alternate()//Task<void>
+//{
+//    var url = "https://api.lattigo.com/v2/device_operations/activation_request";
+
+//    var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+//    httpRequest.Method = "POST";
+
+//    httpRequest.ContentType = "application/json";
+//    httpRequest.Headers["Authorization"] = "Basic NjZmOWYyMTBhOTk2YTJlZDFjZWIxOGIyYzgxNjY4ZjE6NzE5OGMyZDU0N2MxMjM4MjZjMDU0YTE3YTliZjEyYzA1NzU1ZDgzNDYwOGJkNjk4NmUxMTU0ZmI0M2YwMmMxYg==";
+
+//    var data = "{ \"rate_plan_name\" : \"ACME Co 5mb Rate Plan\", \"activation_requests\": [ { \"imei\" : \"111111111111111\" , \"iccid\" : \"89222222222222222222\" }, { \"imei\" : \"333333333333333\" , \"iccid\" : \"89444444444444444444\", \"note\"  : \"Notes are stored with the device record and can be used for sorting, filtering, record keeping, etc.\" }, { \"imei\" : \"555555555555555\" , \"iccid\" : \"89666666666666666666\", \"note3\" : \"Note fields do not need to be filled in any particular order.\" } ] }";
+
+//    using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
+//    {
+//        streamWriter.Write(data);
+//    }
+
+//    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+//    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+//    {
+//        var result = streamReader.ReadToEnd();
+//    }
+
+//    return httpResponse.StatusCode;
+
+//}
+
+}*/
+
+//const string /*RequestType = "\"request_type\"",*/
+//                    //IMEI = "\"imei\"",
+//                    //SimNumber = "\"iccid\"",
+//                    //Error = "\"error\":",
+//                    //ProcessedString = "\"processed\":",
+//                    //UnprocessedString = "\"unprocessed\":",
+//                    //StateofSim = "\"state\"",
+//                    //PathForAPIFile = @"C:\SimAutomationLocalFiles\",
+//                    //PathForReport = @"C:\SimAutomationLocalFiles\Reports\",
+//                    //PathForInitialFile = @"C:\SimAutomationLocalFiles\initialFiles\",
+//                    //PathForFinalFile = @"C:\SimAutomationLocalFiles\finalFiles\",
+//                    //newLine = "\r\n",
+//                    //TextFormat = ".txt";
+
+
+////const string        versionNumber = "V 0.0.5";//GitVisual Comment
+////const string        VersionDetails = "Solved all issues listed in Email. Stable version!";
+////const string        HelpText = 
+////                    "\r\nTab1: Sim Info" +
+////                    "\r\n\r\nActivate Individual Sim:" +
+////                    "\r\nIt is used to activate any single SimID. Manually Paste/Type the details and Hit Activate Sim." +
+////                    "\r\n\r\nCheck Status of Individual Sim Card:" +
+////                    "\r\nIt is used to check the activation status of any Individual Sim. Manually Paste/Type the details and Hit Check status." +
+////                    "\r\n to view all the techincal info of that specific ID, use Checkbox \"view Technical Details\"" +
+////                    "\r\nTo view the status of the File you have selected, use Checkbox\"view Status for all" +
+////                    "\"\r\n\r\nBrowse:\r\nHelps you to navigate through the File explorer to select the File." +
+////                    "\r\nTab 2: Documentation is empty.";
+
+//this.Dataset_SimID = FPC.dataset_SimID;
+//this.Dataset_IMEI = FPC.dataset_IMEI;
+//this.Dataset_MeterID = FPC.dataset_MeterID;
+//this.Dataset_batch = FPC.dataset_batch;
+//this.Dataset_MTypeCode = FPC.dataset_MTypeCode;
+//this.Dataset_commChkDate = FPC.dataset_commChkDate;
+
+
+#region TempCommentedCode
+//if (ProcessedResponse.Length > 10)
+//{
+//    ProcessedResponse = ProcessedResponse.Substring(ProcessedResponse.IndexOf("{") + 1);
+//    tempStringResponse2 = ProcessedResponse.Substring(ProcessedResponse.IndexOf("\"iccid\"") + 7);
+//    tempStringResponse2 = tempStringResponse2.Substring(tempStringResponse2.IndexOf("\"") + 1, 21);
+//    tempStringResponse2 = tempStringResponse2.TrimStart(trimmerArray);//'\"', ':' --- '\"', ','
+//    tempStringResponse2 = tempStringResponse2.TrimEnd(trimmerArray); DisplayStringList.Add("SimID: " + tempStringResponse2);
+
+//    tempStringResponse2 = ProcessedResponse.Substring(ProcessedResponse.IndexOf("\"imei\"") + 6);
+//    tempStringResponse2 = tempStringResponse2.Substring(tempStringResponse2.IndexOf("\"") + 1, 16);
+//    tempStringResponse2 = tempStringResponse2.TrimStart(trimmerArray);
+//    tempStringResponse2 = tempStringResponse2.TrimEnd(trimmerArray); DisplayStringList.Add("IMEI: " + tempStringResponse2);
+
+//    tempStringResponse2 = ProcessedResponse.Substring(ProcessedResponse.IndexOf("\"request_type\"") + 14);
+//    tempStringResponse2 = tempStringResponse2.Substring(tempStringResponse2.IndexOf("\"") + 1);
+//    tempStringResponse2 = tempStringResponse2.Substring(0, tempStringResponse2.IndexOf("\""));
+//    tempStringResponse2 = tempStringResponse2.TrimStart(trimmerArray);
+//    tempStringResponse2 = tempStringResponse2.TrimEnd(trimmerArray); DisplayStringList.Add("Request Type: " + tempStringResponse2);
+//    DisplayStringList.Add("---------------");
+//}
+//if (unProcessedResponse.Length > 10)
+//{
+//    tempStringResponse2 = unProcessedResponse.Substring(unProcessedResponse.IndexOf("\"error\":") + 8);
+//    tempStringResponse2 = tempStringResponse2.Substring(tempStringResponse2.IndexOf("\"") + 1);
+//    tempStringResponse2 = tempStringResponse2.Substring(0, tempStringResponse2.IndexOf("\","));
+//    tempStringResponse2 = tempStringResponse2.TrimStart(trimmerArray);
+//    tempStringResponse2 = tempStringResponse2.TrimEnd(trimmerArray);
+//    tempStringResponse2 = tempStringResponse2.Replace('\"', ' '); tempStringResponse2 = tempStringResponse2.Replace('\\', ' ');
+//    DisplayStringList.Add("Error Message: " + tempStringResponse2);
+//}
+#endregion TempCommentedCode
+
+//RersponseString =
+//"{ \"processed\": [{\"iccid\": \"89222222222222222222\",\"imei\": \"111111111111111\",\"note\": \"\",\"note1\": \"\",\"note2\": \"\",\"note3\": \"\", \"request_type\": \"activate\"    },    {\"iccid\": \"89666666666666666666\",\"imei\": \"555555555555555\",\"note\": \"\",\"note1\": \"\",\"note2\": \"\",\"note3\":\"Note fields do not need to be filled in any particular order.\",\"request_type\": \"activate\"    }  ],\"unprocessed\": [    {\"device_index\": 1,\"error\": \"{\"89666666666666666666\":[\"Error messages would be here about an issue with the ICCID\"]}\",\"input\": {   \"iccid\": \"89444444444444444444\",    \"imei\": \"333333333333333\", \"note\": \"Notes are stored with the device record and can be used for sorting, filtering, record keeping, etc.\",\"note1\": \"\",    \"note2\": \"\",    \"note3\": \"\"} }  ]}";
